@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+	public static void Main()
+	{
+		/* Console.Clear();*/
+		List<int> lista=new List<int>(){10,8,7,6,5,4,3,2,1};
+         Console.WriteLine("coloca um valor digitado a lista e a reordena");
+		 
+		 int n;
+		 
+		 Console.WriteLine("Mostrando a lista original");       
+		 foreach(int aux in lista)
+         { Console.WriteLine(aux);}
+		
+		Console.WriteLine("Digite o valor a ser colocado na lista encontrado");
+		 n=Convert.ToInt32(Console.ReadLine());
+	    lista.Add(n);
+		
+		Console.WriteLine("Mostrando a lista com o elemento adicional");       
+		 foreach(int aux in lista)
+         { Console.WriteLine(aux);}
+		
+		lista.Sort();
+		
+		Console.WriteLine("Mostrando a lista ordenada");       
+		 foreach(int aux in lista)
+         { Console.WriteLine(aux);}
+		
+	}
+}

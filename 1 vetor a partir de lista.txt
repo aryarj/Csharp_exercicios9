@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+
+namespace foreachteste
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         List<int> lista=new List<int>() { 10, 20, 30, 40, 50, 60,70,80 };
+         Console.WriteLine("Informe a quantidade de unidades do vetor");
+         int qtde=Convert.ToInt32(Console.ReadLine());
+         int[] vetor=new int[qtde];
+         int pos=0;
+         foreach(int aux in lista)
+         {
+             vetor[pos]=aux;
+             Console.WriteLine("vetor["+pos+"]="+vetor[pos]);
+             pos++;
+             if(pos==qtde)
+             {
+                 break;
+             }
+         }
+
+
+
+        }
+        
+        
+
+        
+    }
+}

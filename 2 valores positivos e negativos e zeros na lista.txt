@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+	public static void Main()
+	{
+		/* Console.Clear();*/
+		List<int> lista=new List<int>();
+         Console.WriteLine("Informa a quantidade de números negativos e positivos");
+		 Console.WriteLine("em uma lista aleatória de dez uniddes");
+         int qtde=10;
+         
+		 Random rn = new Random();
+		 int a;
+		 int countn=0;
+		 int countp=0;
+		 int countz=0;
+		
+		//fabricando uma lista com 10 valores aleatórios positivos, negativos e zeros
+		 for(int i=0; i<qtde ; i++)
+		 {
+			 a=rn.Next(-10,10);
+			 lista.Add(a);
+			 Console.WriteLine("Número na lista "+a);
+		 }
+         
+		 //contando os numeros positivos e negativos na lista
+          foreach(int aux in lista)
+         {
+			  if(aux<0){countn++;}
+			  if(aux>0){countp++;}
+			  if(aux==0){countz++;}
+	     }
+	    //informando essas quantidades
+		Console.WriteLine("Há "+countn+" números negativos na lista");
+		Console.WriteLine("Há "+countp+" números positivos na lista");
+		Console.WriteLine("Há "+countz+" números zeros na lista");
+						  
+	}
+}

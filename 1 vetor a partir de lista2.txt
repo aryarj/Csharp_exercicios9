@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+	public static void Main()
+	{
+		/* Console.Clear();*/
+		List<int> lista=new List<int>();
+         Console.WriteLine("Informe a quantidade de unidades do vetor");
+         int qtde=Convert.ToInt32(Console.ReadLine());
+         int[] vetor=new int[qtde];
+		 Random rn = new Random();
+		 int pos=0;
+		 int n;
+		
+		 for(int i=0; i<qtde ; i++)
+		 {
+			 lista.Add(rn.Next(1,100));
+		 }
+         foreach(int aux in lista)
+         {
+             vetor[pos]=aux;
+             Console.WriteLine("vetor["+pos+"]="+vetor[pos]);
+             pos++;
+             if(pos==qtde)
+             {
+                 break;
+             }
+         }
+	  n=lista.Count;
+	  Console.WriteLine("são"+n+"elementos na lista");
+						  
+						  
+	}
+}
